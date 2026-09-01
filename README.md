@@ -5,6 +5,41 @@ A three.js Formula 1 game built to the standard of the current official F1 title
 One mode: **Time Trial** at **Bahrain International Circuit** under floodlights, in a
 **2026-regulation** car.
 
+## The prompt
+
+```
+I want you to build a car F1 game in three.js at the level of F1 26.
+It should be utterly perfect — from the cars to the gameplay to anything you
+could think of.
+
+THE BAR: F1 26
+Go look at it first, in detail, before writing anything. Everything below compares
+against that, never against your own idea of good.
+
+Split the build of the car F1 game in three.js into the smallest pieces that can be improved and judged separately.
+Fan out a sub-agent per piece so each one gets full attention.
+
+For every piece, loop:
+1. BUILDER — build or improve the piece.
+2. CRITIC — a *separate* sub-agent with fresh context. It never sees the builder's
+   reasoning, only the finished output. It inspects the real thing (at the game rendered),
+   not a summary of it.
+3. The critic puts our piece and the reference side by side, unlabelled and in random
+   order, and must say which one is better and why, in specifics.
+4. If ours doesn't win, it says exactly what the reference has that we don't, and the
+   builder goes again.
+Be a really harsh critic. Don't stop until the critic is genuinely wowed compared to
+F1 26.
+
+STOP: when every piece wins its blind comparison, or after [BUDGET — N rounds per
+piece / N total sub-agents / a time box]. Report per piece: rounds spent, what finally
+closed the gap, and anything still behind the reference.
+
+Fais que un mode de jeu pas besoin de plein
+Constraints: you need to stop at 9:00pm (so you have 3 hours to finish).
+Never let the builder grade its own work. Never accept "close enough" as a win.
+```
+
 ## Run it
 
 ```bash
